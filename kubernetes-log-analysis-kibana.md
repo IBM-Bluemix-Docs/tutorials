@@ -220,7 +220,7 @@ The application generates some log data every time you visit its URL. Because of
   </tr>
   <tr>
   <td>Germany</td>
-  <td>[https://logging.eu-de.bluemix.net](https://logging.eu-de.bluemix.net) </td>
+  <td>[https://logging.eu-fra.bluemix.net](https://logging.eu-fra.bluemix.net) </td>
   </tr>
   <tr>
   <td>United Kingdom</td>
