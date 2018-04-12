@@ -105,9 +105,11 @@ Start by creating the first action, adding the action to a sequence and then add
 11. To test it, click on **Change Input** and enter the JSON below
     ```json
     {
+    "doc":{
       "name": "John Smith",
       "email": "john@smith.com",
       "comment": "this is my comment"
+    }
     }
     ```
     {: codeblock}
