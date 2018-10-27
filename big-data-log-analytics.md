@@ -37,7 +37,7 @@ This tutorial uses the following runtimes and services:
 
 * [{{site.data.keyword.cos_short}}](https://console.bluemix.net/catalog/services/cloud-object-storage)
 * [{{site.data.keyword.messagehub}}](https://console.bluemix.net/catalog/services/message-hub)
-* [{{site.data.keyword.sqlquery_short}}y](https://console.bluemix.net/catalog/services/sql-query)
+* [{{site.data.keyword.sqlquery_short}}](https://console.bluemix.net/catalog/services/sql-query)
 * [{{site.data.keyword.streaminganalyticsshort}}](https://console.bluemix.net/catalog/services/streaming-analytics)
 
 This tutorial may incur costs. Use the [Pricing Calculator](https://console.bluemix.net/pricing/) to generate a cost estimate based on your projected usage.
