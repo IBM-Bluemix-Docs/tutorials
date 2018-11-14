@@ -164,7 +164,7 @@ Navigate to [Dashboard](https://console.bluemix.net/dashboard/) and
 1. delete Kubernetes cluster `mycluster`
 2. delete {{site.data.keyword.cos_full_notm}} `myobjectstorage`
 3. delete {{site.data.keyword.messagehub}} `mymessagehub`
-4. select **Containers** from the left menu, **Private Repositories** and then delete `pubsub-xxx` repositories.
+4. select **Kubernetes** from the left menu, **Registry** and then delete `pubsub-xxx` repositories.
 
 ## Related content
 {:related}
