@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2018
-lastupdated: "2018-07-31"
+  years: 2018, 2019
+lastupdated: "2019-01-10"
 ---
 
 {:java: #java .ph data-hd-programlang='java'}
@@ -97,15 +97,7 @@ Choose a {{site.data.keyword.Bluemix_notm}} data center to deploy the secure pri
 
 To create the private enclosure in the target data center, the required private VLANs for servers must first be assigned. There is no charge for the first private and first public VLANs. Additional VLANs to support a multi-tier application topology are chargable. 
 
-To ensure that sufficient VLANs are available on the same data center router and can be associated with the VRA, it is advised that they are ordered via a [support ticket](https://{DomainName}/docs/infrastructure/vlans/order-vlan.html#order-vlans).   
-
-In the [vlan_request_form_fill_in.pdf](https://public.dhe.ibm.com/cloud/bluemix/network/vlans/vlan_request_form_fill_in.pdf) specify:
-  - target data center
-  - 1 x private VLAN
-  - Description: 'For use with VRA/Network Gateway' 
-  - additional private VLANs if required
-
-The support ticket may take several hours to action. You will be notified if additional information is required, to confirm authorization of the additional chargeable VLANs and final of completion, by email to the address associated with your user account. Record the VLANs assigned as these will be needed in a later step. 
+To ensure that sufficient VLANs are available on the same data center router and can be associated with the VRA, it is advised that they are ordered. See [Ordering VLANs](https://{DomainName}/docs/infrastructure/vlans/order-vlan.html#order-vlans). 
 
 ## Provision Virtual Router Appliance
 {: #VRA}
