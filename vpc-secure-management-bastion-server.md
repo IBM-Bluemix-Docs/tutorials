@@ -23,7 +23,7 @@ lastupdated: "2019-03-13"
 IBM will be accepting a limited number of customers to participate in an Early Access program to VPC starting in early April, 2019 with expanded usage being opened in the following months. If your organization would like to gain access to IBM Virtual Private Cloud, please complete this [nomination form](https://{DomainName}/vpc){: new_window} and an IBM representative will be in contact with you regarding next steps.
 {: important}
 
-This tutorial walks you through the deployment of a bastion host to securely access remote instances within a virtual private cloud. Bastion host is an instance that is provisioned in a public subnet and can be accessed via SSH. Once setup, the bastion host acts as a **jump** server allowing secure connection to instances provisioned in a private subnet.
+This tutorial walks you through the deployment of a bastion host to securely access remote instances within a virtual private cloud. Bastion host is an instance that is provisioned in a public subnet and can be accessed via SSH. Once it's set up, the bastion host acts as a **jump** server allowing secure connection to instances provisioned in a private subnet.
 
 To reduce exposure of servers within the VPC you will create and use a bastion host. Administrative tasks on the individual servers are going to be performed using SSH, proxied through the bastion. Access to the servers and regular internet access from the servers, e.g., for software installation, will only be allowed with a special maintenance security group attached to those servers.
 {:shortdesc}
@@ -31,7 +31,7 @@ To reduce exposure of servers within the VPC you will create and use a bastion h
 ## Objectives
 {: #objectives}
 
-* Learn how to setup a bastion host and security groups with rules
+* Learn how to set up a bastion host and security groups with rules
 * Securely manage servers via the bastion host
 
 ## Services used
