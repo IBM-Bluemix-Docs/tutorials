@@ -204,7 +204,7 @@ A virtual server is created at this point to aid in diagnosis of VRA configurati
    - Add the **SSH Key** you specified earlier.
    - Set **Operating System** to **CentOS 7.x - Minimal**
    - In **Uplink Port Speeds**, the network interface must be changed from the default of *public and private* to only specify a **Private Network Uplink**. This ensures that the new server has no direct access to the Internet, and access is controlled by the routing and firewall rules on the VRA.
-   - Set **Private VLAN** to the VLAN ID of the private VLAN ordered earlier.
+   - Set **Private VLAN** to the VLAN number of the private VLAN ordered earlier.
 4. Click tick box to accept the 'Third-Party' service agreements, then **Create**.
 5. Monitor for completion on the [Devices](https://{DomainName}/classic/devices) page or via email. 
 6. Make note of the *Private IP address* of the VSI for a later step and that under the **Network** section on the **Device Details** page that the VSI is assigned to the correct VLAN. If not, delete this VSI and create a new VSI on the correct VLAN. 
@@ -262,7 +262,7 @@ Configure the VRA virtual network interface to route to the new subnet from the 
    SSH vyatta@<VRA Private IP Address>
    ```
    {: codeblock}
-2. Create a new virtual interface with the private VLAN ID, subnet gateway IP address and CIDR recorded in the earlier steps. The CIDR will typically be /26. 
+2. Create a new virtual interface with the private VLAN number, subnet gateway IP address and CIDR recorded in the earlier steps. The CIDR will typically be /26. 
    ```
    set interfaces bonding dp0bond0 vif <VLAN ID> address <Subnet Gateway IP>/<CIDR>
    commit
@@ -466,7 +466,6 @@ The VRA is on a monthly paid plan. Cancellation does not result in a refund. It 
 
 - Cancel any virtual servers or bare-metal servers
 - Cancel the VRA
-- Cancel any additional VLANs by support ticket. 
 
 ## Related content
 {: #related}
