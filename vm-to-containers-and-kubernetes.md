@@ -1,7 +1,8 @@
 ---
+
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-05-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -27,7 +28,7 @@ Depending on the type of app that you have, the steps to migrate your app might 
 ## Objectives
 {: #objectives}
 
-- Understand how to idendify micro-services in a VM based app and learn how to map components between VMs and Kubernetes.
+- Understand how to identify micro-services in a VM based app and learn how to map components between VMs and Kubernetes.
 - Learn how to containerize a VM based app.
 - Learn how to deploy the container to a Kubernetes cluster in {{site.data.keyword.containershort_notm}}.
 - Put everything learned to practice, run the **JPetStore** app in your cluster.
@@ -70,7 +71,7 @@ The following diagram shows an example of a modern container architecture that r
 1. The user sends a request to the public endpoint of the Java app. The public endpoint is represented by an Ingress application load balancer (ALB) that load balances incoming network traffic across app pods in the cluster. The ALB is a collection of rules that allow inbound network traffic to a publicly exposed app.
 2. The ALB forwards the request to one of the available app pods in the cluster. App pods run on worker nodes that can be a virtual or physical machine.
 3. App pods store data in persistent volumes. Persistent volumes can be used to share data between app instances or worker nodes.
-4. App pods store data in an {{site.data.keyword.Bluemix_notm}} database service. You can run your own database inside the Kubernetes cluster, but using a managed database-as-a-service (DBasS) is usually easier to configure and provices built-in backups and scaling. You can find many different types of databases in the [IBM cloud catalog](https://{DomainName}/catalog/?category=data).
+4. App pods store data in an {{site.data.keyword.Bluemix_notm}} database service. You can run your own database inside the Kubernetes cluster, but using a managed database-as-a-service (DBasS) is usually easier to configure and provides built-in backups and scaling. You can find many different types of databases in the [IBM Cloud catalog](https://{DomainName}/catalog/?category=data).
 
 ### VMs, containers, and Kubernetes
 
@@ -131,12 +132,12 @@ To make the above more specific, let's assume you want to run a production web a
 
 With Kubernetes, you have two options for handling databases:
 
-1. You can run your database inside the Kubernetes cluster, to do that you would need to create a microservice to run the database. If using MySQL database example, you need to do the following:
+1. You can run your database inside the Kubernetes cluster, to do that you would need to create a microservice to run the database. For example, if you are using a MySQL database, you would need to complete the following steps:
    - Create a MySQL Dockerfile, see an example [MySQL Dockerfile](https://github.com/IBM-Cloud/jpetstore-kubernetes/blob/master/jpetstore/db/Dockerfile) here.
    - You would need to use secrets to store the database credential. See example of this [here](https://github.com/IBM-Cloud/jpetstore-kubernetes/blob/master/jpetstore/db/Dockerfile.secret).
-   - You would need a deployment.yaml file with the configuration of your database to deployed to Kubernetes. See example of this [here](https://github.com/IBM-Cloud/jpetstore-kubernetes/blob/master/jpetstore/jpetstore.yaml).
-2. The second option would be to use the managed database-as-a-service (DBasS) option. This option is usually easier to configure and provides built-in backups and scaling. You can find many different types of databases in the  [IBM cloud catalog](https://{DomainName}/catalog/?category=data). To use this option, you would need to do the following:
-   - Create a managed database-as-a-service (DBasS) from the [IBM cloud catalog](https://{DomainName}/catalog/?category=data).
+   - You would need a `deployment.yaml` file with the configuration of your database to deployed to Kubernetes. See example of this [here](https://github.com/IBM-Cloud/jpetstore-kubernetes/blob/master/jpetstore/jpetstore.yaml).
+2. The second option would be to use the managed database-as-a-service (DBasS) option. This option is usually easier to configure and provides built-in backups and scaling. You can find many different types of databases in the  [IBM Cloud catalog](https://{DomainName}/catalog/?category=data). To use this option, you would need to do the following:
+   - Create a managed database-as-a-service (DBasS) from the [IBM Cloud catalog](https://{DomainName}/catalog/?category=data).
    - Store database credentials inside a secret. You will learn more on secrets in the "Store credentials in Kubernetes secrets" section.
    - Use the database-as-a-service (DBasS) in your application.
 
