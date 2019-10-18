@@ -31,7 +31,7 @@ Apps or parts of your apps will have outages - it is a fact. It can be a problem
 ## Services used
 
 This tutorial uses the following runtimes and services:
-* [{{site.data.keyword.runtime_nodejs_notm}}](https://{DomainName}/catalog/starters/sdk-for-nodejs) Cloud Foundry App
+* [{{site.data.keyword.runtime_nodejs_notm}}](https://{DomainName}/catalog/starters/cloud-foundry?runtime=sdk-for-nodejs) Cloud Foundry App
 * [{{site.data.keyword.contdelivery_short}}](https://{DomainName}/catalog/services/continuous-delivery) for DevOps
 * [{{site.data.keyword.cis_full_notm}}](https://{DomainName}/catalog/services/internet-services)
 
@@ -51,7 +51,7 @@ This tutorial involves an active/active scenario where two copies of the applica
 
 Start by creating a Node.js starter application that runs in a Cloud Foundry environment.
 
-1. In the [**Catalog**](https://{DomainName}/catalog/), under the [**Compute**](https://{DomainName}/catalog?category=compute) category, select **[{{site.data.keyword.runtime_nodejs_notm}}](https://{DomainName}/catalog/starters/sdk-for-nodejs)**.
+1. In the [**Catalog**](https://{DomainName}/catalog/), under the [**Compute**](https://{DomainName}/catalog?category=compute) category, select [**Cloud Foundry**](https://{DomainName}/cloudfoundry/overview), Select [**Public Applications**](https://{DomainName}/catalog/starters/cloud-foundry?runtime=sdk-for-nodejs) and choose the **{{site.data.keyword.runtime_nodejs_notm}}** runtime.
 3. Enter a **unique name** for your application, which will also be your host name, for example: myusername-nodeapp. And click **Create**.
 4.  After the application starts, click the **Visit URL** link on the **Overview** page to see your application in a new tab.
 
