@@ -165,7 +165,7 @@ On a terminal:
    ```
 1. Retrieve the cluster ingress subdomain:
    ```sh
-   kubectl ks cluster get $MYCLUSTER
+   ibmcloud ks cluster get $MYCLUSTER
    ```
    {:pre}
 1. Define a variable pointing to the subdomain:
