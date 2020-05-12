@@ -138,7 +138,7 @@ In this section, you are going to look at how to scale the virtual server resour
    ```
    # a cloud object storage
    variable "resource_group" {
-     default     = "default"
+     default     = "Default"
      description = "resource group"
    }
    
