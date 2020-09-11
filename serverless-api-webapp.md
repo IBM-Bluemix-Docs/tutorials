@@ -159,7 +159,7 @@ Now, add the second action to that sequence:
 
 The second sequence is used to retrieve the existing guestbook entries. This sequence will:
    * List all documents from the database.
-   * Format the documents and returning them.
+   * Format the documents and return them.
 
 1. Under [**Functions**](https://{DomainName}/functions), click on **Actions** and then **Create**.
 2. Then, after selecting **Action**, use `set-read-input` as name. Again, select **guestbook** as package and a **Node.js** version as runtime. Click **Create**.
