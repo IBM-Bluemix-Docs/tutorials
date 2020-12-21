@@ -174,16 +174,16 @@ In this section, you will create a CDN service. The CDN service distributes cont
 {: #static-files-cdn-6}
 
 1. Go to the catalog in the console, and select [**Content Delivery Network**](https://{DomainName}/catalog/infrastructure/cdn-powered-by-akamai) from the Network section. This CDN is powered by Akamai. Click **Create**.
-2. On the next dialog, set the **Hostname** to a subdomain in a custom domain that you can control.  For example if you own the domain `yourdomain.com` choose a Hostname something lik `static.yourdomain.com`.  If you do not control your own domain, no problem, but below you will have limited options - you must choose HTTPS with a `Wildcard` SSL certificate, and instead of accessing the CDN contents through `static.yourdomain.com` use the IBM provided CNAME.
+2. On the next dialog, set the **Hostname** to a subdomain in a custom domain that you can control.  For example if you own the domain `yourdomain.com`(You may register new domains through [**Domain Name Registration(DNR)**](https://cloud.ibm.com/docs/dns?topic=dns-register-a-new-domain) if you want to) choose a Hostname something lik `static.yourdomain.com`.  If you do not control your own domain, no problem, but below you will have limited options - you must choose HTTPS with a `Wildcard` SSL certificate, and instead of accessing the CDN contents through `static.yourdomain.com` use the IBM provided CNAME.
 3. Leave the **Custom CNAME** prefix blank, it will default to a unique name.
 4. Next, under **Configure your origin**, leave **Host header** and **Path** empty.
 5. Select **Object Storage** to configure the CDN for COS.
 6. Set the **Endpoint** to your bucket API endpoint ($PUBLIC_ENDPOINT).  Above thie was: **s3.us-south.cloud-object-storage.appdomain.cloud**.
 7. Set **Bucket name** to $BUCKET_NAME
-7. Enable HTTP (80)
-7. Optionally enable HTTPS (443) for https access.  Enable if you do not control the DNS **Hostname** supplied earlier.
+8. Enable HTTP (80)
+9. Optionally enable HTTPS (443) for https access.  Enable if you do not control the DNS **Hostname** supplied earlier.
    - For **SSL certificate** select **DV SAN Certificate** to use your custom domain. If you do not have a custom domain pick the **Wildcard Certificate** option.
-9. Accept the **Master Service Agreement** and click **Create**.
+10. Accept the **Master Service Agreement** and click **Create**.
 
 ### Access your content through the CDN CNAME
 {: #static-files-cdn-7}
@@ -191,8 +191,8 @@ In this section, you will create a CDN service. The CDN service distributes cont
 1. Select the CDN instance [in the list](https://{DomainName}/classic/network/cdn).
 2. If you earlier picked *DV SAN Certificate*, you are likely seeing `Requesting certificate`.  It can take as long as 24 hours for this state to complete.  When available follow the steps shown when clicking on **View domain validation**.  Note that this can take a few hours.  If you want to continue with this tutorial just create a new CDN and this time do not enable HTTPS or select a wildcard certificate.  Do not forget to select a different hostname.
 3. The **Details** panel shows both the **Hostname** and the **IBM CNAME** for your CDN
-3. Go to your DNS provider and create a CNAME record for the **HOSTNAME** for **IBM CNAME**.  For me it was `static.yourdomain.com` -> `cdnakawazw9dpv33.cdn.appdomain.cloud`
-4. Access your files with `http://<static.yourdomain.com>/index.html`.
+4. Go to your DNS provider(If your domain is already delegated to our Softlayer DNS, you may manage your DNS records through [**Domain Name System(DNS)**](https://cloud.ibm.com/docs/dns?topic=dns-how-to-use-the-dns-interface)) and create a CNAME record for the **HOSTNAME** for **IBM CNAME**.  For me it was `static.yourdomain.com` -> `cdnakawazw9dpv33.cdn.appdomain.cloud`
+5. Access your files with `http://<static.yourdomain.com>/index.html`.
 
 You can demonstrate the performance improvement.  Access via the CDN.  Check the output of the first curl to verify successful connection:
 ```
