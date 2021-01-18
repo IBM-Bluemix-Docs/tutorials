@@ -26,7 +26,7 @@ This tutorial walks you through the process of moving a VM based app to a Kubern
 The lessons in this tutorial include concepts for how to take an existing app, containerize the app, and deploy the app to a Kubernetes cluster. To containerize your VM based app, you can choose between the following options.
 
 1. Identify components of a large monolith app that can be separated into their own micro-service. You can containerize these micro-services and deploy them to a Kubernetes cluster.
-2. Containerize the entire app and deploy the app to a Kubernetes cluster.
+2. Containerize the entire app and deploy the app to a Kubernetes cluster. Solutions like [Konveyor Move2Kube](https://konveyor.io/move2kube/) can help accelerate this journey.
 
 Depending on the type of app that you have, the steps to migrate your app might vary. You can use this tutorial to learn about the general steps that you have to take and things that you have to consider before migrating your app.
 
@@ -270,6 +270,8 @@ To build your own Dockerfile for your existing app, you might use the following 
 - ENV NAME - Define environment variables.
 - CMD - Define commands that run when the container launches.
 
+Tools like [Konveyor Move2Kube](https://konveyor.io/move2kube/) can help accelerate the process of containerization.
+
 Images are typically stored in a registry that can either be accessible by the public (public registry) or set up with limited access for a small group of users (private registry). Public registries, such as Docker Hub, can be used to get started with Docker and Kubernetes to create your first containerized app in a cluster. But when it comes to enterprise apps, use a private registry, like the one provided in {{site.data.keyword.registrylong_notm}} to protect your images from being used and changed by unauthorized users.
 
 To containerize an app and store it in {{site.data.keyword.registrylong_notm}}:
@@ -309,9 +311,9 @@ After a container image is built and pushed to the cloud, next you need to deplo
 ### Learn how to create a Kubernetes deployment yaml file
 {: #vm-to-containers-and-kubernetes-20}
 
-To create Kubernetes deployment.yaml files, you would need to do something like this:
+To create Kubernetes deployment yaml files, you would need to do something like this:
 
-1. Create a deployment.yaml file, here is an example of a [deployment YAML](https://github.com/IBM-Cloud/jpetstore-kubernetes/blob/master/jpetstore/jpetstore.yaml) file.
+1. Create a deployment.yaml file manually or use [Konveyor Move2Kube](https://konveyor.io/move2kube/) to create one for your application. Here is an example of a [deployment YAML](https://github.com/ibm-cloud/ModernizeDemo/blob/master/jpetstore/jpetstore.yaml) file.
 
 2. In your deployment.yaml file, you can define [resource quotas](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/) for your containers to specify how much CPU and memory each container needs to properly start. If containers have resource quotas specified, the Kubernetes scheduler can make better decisions about the worker node where to place your pods on.
 
@@ -354,3 +356,4 @@ To put everything you've learned in practice, follow the [demonstration](https:/
 - Set up [continuous integration and delivery pipeline](https://{DomainName}/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes#continuous-deployment-to-kubernetes) for containerized apps that run in Kubernetes.
 - Deploy the production cluster [across multiple locations](https://{DomainName}/docs/solution-tutorials?topic=solution-tutorials-multi-region-webapp#multi-region-webapp).
 - Use [multiple clusters across multiple locations](https://{DomainName}/docs/containers?topic=containers-regions-and-zones) for high availability.
+- Re-platform applications to Kubernetes using [Konveyor Move2Kube](https://konveyor.io/move2kube/).
